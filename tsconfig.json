@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "removeComments": true,
+      "jsx": "react",
+      "allowSyntheticDefaultImports": true,
+      "target": "es2017",
+      "outDir": "./dist",
+    },
+    "include": [
+        "./src/setupTests.ts"
+    ]
+  }
+  
