@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { styles } from '../../styles/components';
 import Counter from './Counter';
 import CountersSummary from './CountersSummary';
 import { ICounter } from './types';
@@ -24,8 +25,9 @@ function CountersPannel() {
   };
 
   return (
-    <section>
-      <div>
+    <section style={styles.Pannel}>
+      <div style={styles.CountersHeader}>Counters challenge</div>
+      <div style={styles.Counters}>
         {counters.map((counter) => (
           <Counter
             key={counter.id}
@@ -35,7 +37,7 @@ function CountersPannel() {
           />
         ))}
       </div>
-      <div>
+      <div style={styles.CountersSummary}>
         <CountersSummary counters={counters} />
       </div>
     </section>

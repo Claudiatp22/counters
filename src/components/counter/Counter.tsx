@@ -1,5 +1,6 @@
 import React from 'react';
 import { Increment, Decrement } from '../../functionalities';
+import { styles } from '../../styles/components';
 
 interface IProps {
     counterId: number;
@@ -10,11 +11,11 @@ interface IProps {
 
 function Counter({ counterId, value, handleChange }: IProps) {
   return (
-    <div>
+    <div style={styles.Counter}>
       <b data-testid={`counter-${counterId}`}>{value}</b>
       <div>
-        <button data-testid={`subtraction-btn-${counterId}`} type="button" onClick={() => handleChange(counterId, Decrement(value))}>-</button>
-        <button data-testid={`addition-btn-${counterId}`} type="button" onClick={() => handleChange(counterId, Increment(value))}>+</button>
+        <button data-testid={`addition-btn-${counterId}`} type="button" style={styles.IncrementButton} onClick={() => handleChange(counterId, Increment(value))}>+</button>
+        <button data-testid={`subtraction-btn-${counterId}`} type="button" style={styles.DecrementButton} onClick={() => handleChange(counterId, Decrement(value))}>-</button>
       </div>
     </div>
   );
