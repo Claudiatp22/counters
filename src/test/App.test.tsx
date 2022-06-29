@@ -2,10 +2,10 @@ import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
 import App from '../App';
 
-test('Counter should show 3 initial 0s', () => {
+test('Counter should show all values initialized to 0', () => {
   const { getAllByText } = render(<App />);
   const linkElement = getAllByText('0');
-  expect(linkElement.length).toEqual(3);
+  expect(linkElement.length).toEqual(4);
 });
 
 test('Counter 1 should show an increment of 1 when pressing +', async () => {
