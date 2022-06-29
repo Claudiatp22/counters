@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import Counter from './Counter';
-
-interface ICounter {
-  id: number;
-  value: number;
-}
+import CountersSummary from './CountersSummary';
+import { ICounter } from './types';
 
 const initialCounterData: ICounter[] = [
   { id: 1, value: 0 },
@@ -27,16 +24,21 @@ function CountersPannel() {
   };
 
   return (
-    <div>
-      {counters.map((counter) => (
-        <Counter
-          key={counter.id}
-          counterId={counter.id}
-          value={counter.value}
-          handleChange={handleChange}
-        />
-      ))}
-    </div>
+    <section>
+      <div>
+        {counters.map((counter) => (
+          <Counter
+            key={counter.id}
+            counterId={counter.id}
+            value={counter.value}
+            handleChange={handleChange}
+          />
+        ))}
+      </div>
+      <div>
+        <CountersSummary counters={counters} />
+      </div>
+    </section>
   );
 }
 
