@@ -1,5 +1,6 @@
 import { Colors } from './colors';
 
+// Styles for specific components in the app like buttons and panels.
 const App = {
   fontFamily: 'arial',
   display: 'inline-block',

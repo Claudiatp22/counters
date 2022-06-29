@@ -1,3 +1,5 @@
+// Palette of colors used in the app.
+
 export const Colors = {
   primary: '#25a596',
   secondary: '#46515a',

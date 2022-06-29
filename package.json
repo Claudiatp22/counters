@@ -1,5 +1,8 @@
 {
   "name": "counters",
+  "description": "App that contains 3 counters and buttons to add and substract numbers every time the buttons are hit and a total number that represents the sum of all the counters",
+  "author": "Claudia Teres Prieto",
+  "homepage": "https://github.com/Claudiatp22/counters/blob/main/README.md",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
