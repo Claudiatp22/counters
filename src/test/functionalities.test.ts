@@ -1,11 +1,11 @@
-import { Add, Subtract } from '../functionalities';
+import { Increment, Decrement, Add } from '../functionalities';
 
-describe('Counter should', () => {
+describe('Counters should', () => {
   test('decrement value by 1', () => {
     const initialValue = 0;
     const expectedResult = -1;
 
-    const result = Subtract(initialValue);
+    const result = Decrement(initialValue);
     expect(result).toEqual(expectedResult);
   });
 
@@ -13,7 +13,15 @@ describe('Counter should', () => {
     const initialValue = 0;
     const expectedResult = 1;
 
-    const result = Add(initialValue);
+    const result = Increment(initialValue);
+    expect(result).toEqual(expectedResult);
+  });
+
+  test('add all counter values', () => {
+    const initialValues = [1, 2, -1];
+    const expectedResult = 2;
+
+    const result = Add(initialValues);
     expect(result).toEqual(expectedResult);
   });
 });
